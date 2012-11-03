@@ -1,0 +1,22 @@
+#%Module1.0
+##########################################################################################
+## ${projectName} Modulefile
+## by ${author}
+##########################################################################################
+proc ModulesHelp { } {
+     puts stderr "\${projectName} - loads the project environment for ${projectName}\n"
+}
+
+module-whatis	"loads the project environment for ${projectName}"
+#
+# Put the path to your project's environment here
+#
+setenv		VSRC_HOME 	       /ipldev/sharedopt/vsrc/${ENV_DIR}
+#
+# Put the default version of your tools here
+#
+setenv		${TOOL1}	0.1
+setenv		${TOOL2}	5.1.5
+setenv		${TOOL3}	3.81
+setenv		${TOOL4}	6.5
+...

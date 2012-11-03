@@ -1,0 +1,12 @@
+#%Module1.0
+##########################################################################################
+## ${groupName} Modulefile
+## by ${author}
+##########################################################################################
+proc ModulesHelp { } {
+     puts stderr "\${groupName} - loads the ${groupName} environment\n"
+}
+
+module-whatis	"loads the ${groupName} environment"
+
+module load ${module1} ${module2} ${module3} ${...}

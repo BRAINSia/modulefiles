@@ -1,0 +1,14 @@
+#%Module1.0
+##########################################################################################
+## ${toolName} Modulefile
+## by ${author}
+##########################################################################################
+proc ModulesHelp { } {
+     puts stderr "\${toolName} - loads the environment for ${toolName}\n"
+}
+
+module-whatis	"loads the environment for ${toolName}"
+setenv		${ENV_VAR1} 	       ${ENV_VAL1}
+prepend-path	PATH		       $env(${ENV_VAR1})/bin
+prepend-path	DYLD_LIBRARY_PATH      $env(${ENV_VAR1})/lib
+set-alias	${CMDLINE}	       ${toolName_PATH}
