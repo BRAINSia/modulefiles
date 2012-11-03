@@ -1,0 +1,7 @@
+#%Module1.0
+
+if [info exists env(${TOOL_ENV_DEFAULT_VERSION})] {
+	set ModulesVersion $env(${TOOL_ENV_DEFAULT_VERSION})
+} else {
+	set ModulesVersion "${toolVersionNumber}"
+}
