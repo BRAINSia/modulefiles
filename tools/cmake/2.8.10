@@ -9,18 +9,18 @@ proc ModulesHelp { } {
 
 module-whatis	"loads the environment for cmake-2.8.10"
 
-setenv		CMAKE_DIR			/opt/tools/cmake/2.8.10
-
 switch -exact $env(MODULES_OS) {
 	Linux {
+		setenv          CMAKE_DIR       /ipldev/sharedopt/bld/Linux/tools/cmake/2.8.10
 		set 		plat 			"Linux"
 		prepend-path	PATH			$env(CMAKE_DIR)/$plat/bin
 		prepend-path	LD_LIBRARY_PATH		$env(CMAKE_DIR)/$plat/lib
 		}
 	Darwin {
+		setenv          CMAKE_DIR       /usr/local/Cellar/cmake/2.8.10.1
 		set 		plat 			"Darwin"
 		prepend-path    PATH                    $env(CMAKE_DIR)/$plat/bin
-                prepend-path    DYLD_LIBRARY_PATH	$env(CMAKE_DIR)/$plat/lib
+                # prepend-path    DYLD_LIBRARY_PATH	$env(CMAKE_DIR)/$plat/lib
 		}
 	default {
 		puts stderr "ERROR: Platform for OS $env(MODULES_OS) not supported"
