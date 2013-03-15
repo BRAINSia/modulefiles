@@ -1,0 +1,7 @@
+#%Module1.0
+
+if [info exists env(${CMAKE_DEFAULT})] {
+	set ModulesVersion $env(${CMAKE_DEFAULT})
+} else {
+	set ModulesVersion "2.8.10"
+}
